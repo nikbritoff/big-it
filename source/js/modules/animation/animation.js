@@ -1,8 +1,3 @@
-// const ticker = document.querySelector('.ticker');
+import Marquee3k from 'marquee3000';
 
-// // eslint-disable-next-line no-console
-// console.log(ticker);
-
-// setInterval(() => {
-
-// }, 1000);
+Marquee3k.init();

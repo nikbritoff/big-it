@@ -660,8 +660,6 @@ button,
 .section {
   height: 100vh;
   width: 100%;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
 .info-footer {
@@ -696,23 +694,6 @@ button,
   padding: 30px 0;
   margin: 0;
   z-index: 1;
-}
-
-.ticker {
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
-  background-color: #404040;
-  display: block;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.ticker__text {
-  display: inline-block;
 }
 
 .ui-color-bg {
@@ -1114,6 +1095,39 @@ button,
 
 .decor__double--gray::after {
   background-color: #404040;
+}
+
+.ticker {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  background-color: #404040;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ticker__text {
+  padding: 0 57px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ticker__text::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 8px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
