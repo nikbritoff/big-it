@@ -3,12 +3,14 @@
     @@if (!context.index) {
       <a class="header__logo" href="index.html" aria-label="Переход на главную">
         Логотип
+        <img src="/img/logo.svg" alt="Логотип Big-IT">
       </a>
     }
     @@if (context.index) {
-      <span class="header__logo">
+      <img src="/img/logo.svg" alt="Логотип Big-IT" width="175" height="50">
+      <!-- <span class="header__logo">
         Логотип
-      </span>
+      </span> -->
     }
 
     <nav class="main-nav">
@@ -20,16 +22,51 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#advantages" }>Преимущества</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Тарифы</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Схема работы</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 3) { is-active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Наши клиенты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 4) { is-active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Гарантии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 5) { is-active }" @@if (context.headerActiveLinkIndex !== 5) { href="#" }>Контакты</a>
           </li>
         </ul>
       </div>
     </nav>
+    <ul class="contacts-list">
+      <li class="contacts-list__item">
+        @@include("source/html/components/icon.html", {
+          "width": "15",
+          "height": "15",
+          "name": "phone",
+          "round": "true"
+        })
+      </li>
+      <li class="contacts-list__item">
+        @@include("source/html/components/icon.html", {
+          "width": "17",
+          "height": "17",
+          "name": "whatsup",
+          "round": "true"
+        })
+      </li>
+      <li class="contacts-list__item">
+        @@include("source/html/components/icon.html", {
+          "width": "15",
+          "height": "13",
+          "name": "mail",
+          "round": "true"
+        })
+      </li>
+    </ul>
   </div>
 </header>

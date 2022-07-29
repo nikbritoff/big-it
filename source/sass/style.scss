@@ -15,6 +15,9 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/round";
+@import "global/section";
+@import "global/ui-color";
 
 // Blocks
 // ---------------------------------
@@ -24,6 +27,11 @@
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/btn";
+@import "blocks/contacts-list";
+@import "blocks/icon";
+@import "blocks/content";
+@import "blocks/main-page";
+@import "blocks/decor";
 
 // ---------------------------------
 

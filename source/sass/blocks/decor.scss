@@ -1,0 +1,73 @@
+$decor-item-size: 64px;
+
+.decor {
+  &__item {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: $decor-item-size;
+    height: $decor-item-size;
+    border-radius: $decor-item-size 0 0 0;
+    position: relative;
+
+    background-color: $color-ui-main;
+  }
+
+  &__item--tr {
+    transform: rotate(90deg);
+  }
+  &__item--br {
+    transform: rotate(180deg);
+  }
+  &__item--bl {
+    transform: rotate(270deg);
+  }
+
+  &__item--none {
+    background-color: inherit;
+  }
+  &__item--gray {
+    background-color: $color-gray;
+  }
+}
+
+.decor__double {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: $decor-item-size;
+  height: $decor-item-size;
+  position: relative;
+  background-color: $color-gray;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: $decor-item-size;
+    height: $decor-item-size;
+    border-radius: $decor-item-size 0 0 0;
+    position: absolute;
+
+    background-color: $color-ui-main;
+  }
+
+  &--tr::after {
+    transform: rotate(90deg);
+  }
+  &--br::after {
+    transform: rotate(180deg);
+  }
+  &--bl::after {
+    transform: rotate(270deg);
+  }
+
+  &--gray {
+    background-color: $color-ui-main;
+  }
+
+  &--gray::after {
+    background-color: $color-gray;
+  }
+}

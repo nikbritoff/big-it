@@ -3,7 +3,7 @@
 <head>
 
   @@include("source/html/base/head.html")
-  <title>ProjectName — Главная</title>
+  <title>Big-IT – ваше решение для бизнеса</title>
 
 </head>
 <body>
@@ -12,32 +12,54 @@
     @@include("build/img/sprite_auto.svg")
   </div>
 
-  <div class="wrapper">
-    <-- для внутренних страниц используйте "headerActiveLinkIndex": 0\1\2 -->
-    @@include("source/html/base/header.html", {
-      "index": true
-    })
+  <main>
+    <div class="section">
+      <div class="wrapper content">
+        <!-- <-- для внутренних страниц используйте "headerActiveLinkIndex": 0\1\2 !--< -->
+        @@include("source/html/base/header.html", {
+          "index": true
+        })
 
-    <main>
-      <div class="container">
-        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
-        <p><a href="#" data-open-modal="success">modal--success link</a></p>
+          <div class="container main-page">
+            @@include("source/html/components/decor/main-decor-left.html")
+
+            <div class="main-page-content">
+              <h1 class="main-page__caption"><span  class="main-page__caption-accent ui-color-text">IT-поддержка</span> для нотариусов</h1>
+              <p class="main-page__text">Внедрение IT-аутсорсинга позволит заняться основной деятельностью, не отвлекаясь на технические проблемы</p>
+              <button class="main-page__button ui-color-bg">Написать</button>
+            </div>
+
+            @@include("source/html/components/decor/main-decor-right.html")
+          </div>
+
+          <div class="info-footer">
+            <div class="info-footer__line"></div>
+            <p class="info-footer__ticker ticker">
+              <span class="ticker__text">Big-IT – ваше решение для бизнеса</span>
+            </p>
+          </div>
       </div>
-    </main>
+    </div>
 
-    @@include("source/html/base/footer.html")
+    <div class="section" id="advantages">
+      Преимущества
+      <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+      <p><a href="#" data-open-modal="success">modal--success link</a></p>
+      @@include("source/html/base/footer.html")
 
-    @@include("source/html/base/modal.html", {
-      "name": "feedback"
-    })
+      @@include("source/html/base/modal.html", {
+        "name": "feedback"
+      })
 
-    @@include("source/html/base/modal.html", {
-      "name": "success",
-      "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
-    })
-  </div>
+      @@include("source/html/base/modal.html", {
+        "name": "success",
+        "fitContent": true,
+        "noScale": true,
+        "mod": "some-mod"
+      })
+    </div>
+
+  </main>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
