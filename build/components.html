@@ -87,64 +87,59 @@
   </div>
   <div class="wrapper">
     <header class="header ">
-      <div class="container">
-        <a class="header__logo" href="index.html" aria-label="Переход на главную">
-          Логотип
-          <img src="/img/logo.svg" alt="Логотип Big-IT">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xlink:href="#icon-burger"></use>
-            </svg>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#advantages">Преимущества</a>
+      <nav class="header__nav main-nav" data-state="close">
+        <div class="main-nav__wrapper container">
+          <a class="header__logo" href="index.html" aria-label="Переход на главную">
+            <img src="/img/logo.svg" alt="Логотип Big-IT">
+          </a>
+          <ul class="main-nav__list" data-state="close">
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="#advantages">Преимущества</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="#">Тарифы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="#">Схема работы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="#">Наши клиенты</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="#">Гарантии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link " href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="main-nav__toggles" data-state="close">
+            <ul class="main-nav__contacts contacts-list">
+              <li class="contacts-list__item">
+                <a class="icon ui-color-bg  round  ">
+                  <svg width="15" height="15">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Тарифы</a>
+              <li class="contacts-list__item">
+                <a class="icon ui-color-bg  round  ">
+                  <svg width="17" height="17">
+                    <use xlink:href="#icon-whatsup"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Схема работы</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Наши клиенты</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Гарантии</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link " href="#">Контакты</a>
+              <li class="contacts-list__item">
+                <a class="icon ui-color-bg  round  ">
+                  <svg width="15" height="13">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
-        </nav>
-        <ul class="contacts-list">
-          <li class="contacts-list__item">
-            <a class="icon ui-color-bg  round ">
-              <svg width="15" height="15">
-                <use xlink:href="#icon-phone"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="contacts-list__item">
-            <a class="icon ui-color-bg  round ">
-              <svg width="17" height="17">
-                <use xlink:href="#icon-whatsup"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="contacts-list__item">
-            <a class="icon ui-color-bg  round ">
-              <svg width="15" height="13">
-                <use xlink:href="#icon-mail"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+          <button class="main-nav__toggle round" data-state="close"></button>
+        </div>
+      </nav>
     </header>
     <main>
       <div class="container">
@@ -158,6 +153,74 @@
           <p>Класс компонента \ модификаторы</p>
           <p style="color: red;">При необходимости, подсказки \ предупреждение \ важная информация</p>
           <div>Компонент</div>
+        </section>
+        <section>
+          <h2>Кнопки</h2>
+          <p>Класс компонента: button</p>
+          <p style="color: red;">Минимальная ширина по умолчанию: 300px</p>
+          <div><button class="ui-color-bg button  ">
+              Кнопка
+            </button>
+          </div>
+          <p>Класс компонента: button \ модификаторы: wide</p>
+          <p style="color: red;">Занимает всю ширину контейнера</p>
+          <div>
+            <button class="ui-color-bg button  button--wide">
+              Кнопка
+            </button>
+          </div>
+          <p>Класс компонента: icon-button</p>
+          <p style="color: red;">Размер 40px</p>
+          <div>
+            <button class="icon-button ui-color-bg  round  ">
+              <svg width="15" height="13">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </button>
+          </div>
+          <p>Класс компонента: icon-button \ модификаторы: large, round</p>
+          <p style="color: red;">Размер 55px</p>
+          <div>
+            <button class="icon-button ui-color-bg  round  icon-button--medium">
+              <svg width="25" height="23">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </button>
+          </div>
+          <p>Класс компонента: icon-button \ модификаторы: large</p>
+          <p style="color: red;">Размер 68px</p>
+          <div>
+            <button class="icon-button ui-color-bg  icon-button--large">
+              <svg width="25" height="23">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </button>
+          </div>
+          <p>Класс компонента: icon-button \ модификаторы: to</p>
+          <p style="color: red;">Все варианты icon-button, но в роли ссылки. to: path</p>
+          <div>
+            <a class="icon-button ui-color-bg  icon-button--large" href="https://google.com">
+              <svg width="25" height="23">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section>
+          <h2>Типография</h2>
+          <p>Класс компонента: h1, h2, text, number \ модификаторы: secondary, small, medium, large</p>
+          <p style="color: red;">В мобильной версии уменьшается размер шрифта</p>
+          <div>
+            <h1 class="h1">Заголовок h1</h1>
+            <h1 class="h1 h1--secondary">Заголовок h1--secondary italic</h1>
+            <h2 class="h2">Заголовок h2</h2>
+            <h3 class="h3">Заголовок h3</h3>
+            <p class="text">Текст regular</p>
+            <p class="text text--small">Текст text--small</p>
+            <p class="text text--medium">Текст text--medium</p>
+            <p class="text text--large">Текст text--large</p>
+            <p class="number">Числа</p>
+          </div>
         </section>
         <!-- Всегда оставляйте коммент ниже, чтобы удобно было копипастить -->
         <!-- <section>

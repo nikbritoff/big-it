@@ -1,0 +1,46 @@
+.button {
+  color: $color-default-white;
+  border: none;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 24px;
+  min-width: 300px;
+
+  &--wide {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-ui-secondary;
+  }
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+
+  &--medium {
+    width: 55px;
+    height: 55px;
+  }
+
+  &--large {
+    width: 68px;
+    height: 68px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-ui-secondary;
+  }
+}

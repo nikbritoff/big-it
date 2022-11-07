@@ -71,6 +71,87 @@
           <div>Компонент</div>
         </section>
 
+        <section>
+          <h2>Кнопки</h2>
+
+          <p>Класс компонента: button</p>
+          <p style="color: red;">Минимальная ширина по умолчанию: 300px</p>
+          <div>@@include("source/html/components/button.html", { "text" : "Кнопка" })</div>
+
+          <p>Класс компонента: button \ модификаторы: wide</p>
+          <p style="color: red;">Занимает всю ширину контейнера</p>
+          <div>
+            @@include("source/html/components/button.html", {
+              "text": "Кнопка",
+              "variant": "wide"
+            })
+          </div>
+
+          <p>Класс компонента: icon-button</p>
+          <p style="color: red;">Размер 40px</p>
+          <div>
+            @@include("source/html/components/icon-button.html", {
+              "width": "15",
+              "height": "13",
+              "name": "mail",
+              "round": "true"
+            })
+          </div>
+
+          <p>Класс компонента: icon-button \ модификаторы: large, round</p>
+          <p style="color: red;">Размер 55px</p>
+          <div>
+            @@include("source/html/components/icon-button.html", {
+              "width": "25",
+              "height": "23",
+              "name": "mail",
+              "round": "true",
+              "variant": "medium"
+            })
+          </div>
+
+          <p>Класс компонента: icon-button \ модификаторы: large</p>
+          <p style="color: red;">Размер 68px</p>
+          <div>
+            @@include("source/html/components/icon-button.html", {
+              "width": "25",
+              "height": "23",
+              "name": "mail",
+              "variant": "large"
+            })
+          </div>
+
+          <p>Класс компонента: icon-button \ модификаторы: to</p>
+          <p style="color: red;">Все варианты icon-button, но в роли ссылки. to: path</p>
+          <div>
+            @@include("source/html/components/icon-link.html", {
+              "width": "25",
+              "height": "23",
+              "name": "mail",
+              "variant": "large",
+              "to": "https://google.com"
+            })
+          </div>
+        </section>
+
+        <section>
+          <h2>Типография</h2>
+
+          <p>Класс компонента: h1, h2, text, number \ модификаторы: secondary, small, medium, large</p>
+          <p style="color: red;">В мобильной версии уменьшается размер шрифта</p>
+          <div>
+            <h1 class="h1">Заголовок h1</h1>
+            <h1 class="h1 h1--secondary">Заголовок h1--secondary italic</h1>
+            <h2 class="h2">Заголовок h2</h2>
+            <h3 class="h3">Заголовок h3</h3>
+            <p class="text">Текст regular</p>
+            <p class="text text--small">Текст text--small</p>
+            <p class="text text--medium">Текст text--medium</p>
+            <p class="text text--large">Текст text--large</p>
+            <p class="number">Числа</p>
+          </div>
+        </section>
+
         <!-- Всегда оставляйте коммент ниже, чтобы удобно было копипастить -->
         <!-- <section>
           <h2></h2>

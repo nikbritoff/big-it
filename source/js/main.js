@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './modules/animation/animation';
+import {initNavList} from './modules/nav-list/init-nav-list';
 // import Marquee3k from 'marquee3000';
 
 // ---------------------------------
@@ -11,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initNavList();
 
   // Modules
   // ---------------------------------

@@ -1,0 +1,97 @@
+.h1 {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 110%;
+  color: $color-gray;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 35px;
+  }
+
+  &--secondary {
+    font-size: 80px;
+    color: $color-ui-main;
+    font-style: italic;
+
+    @include vp-767 {
+      font-size: 40px;
+    }
+  }
+}
+
+.h2 {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 120%;
+  color: $color-gray;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 40px;
+  }
+}
+
+.h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: $color-gray;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: $color-gray;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    font-size: 18px;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--small {
+    font-size: 16px;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+
+  &--large {
+    font-size: 34px;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+}
+
+.number {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 46px;
+  line-height: 56px;
+  color: $color-gray;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}

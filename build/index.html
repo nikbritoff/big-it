@@ -54,70 +54,63 @@
       <div class="wrapper content">
         <!-- <-- для внутренних страниц используйте "headerActiveLinkIndex": 0\1\2 !--< -->
         <header class="header ">
-          <div class="container">
-            <img src="/img/logo.svg" alt="Логотип Big-IT" width="175" height="50">
-            <!-- <span class="header__logo">
-        Логотип
-      </span> -->
-            <nav class="main-nav">
-              <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-                <svg width="20" height="20" aria-hidden="true">
-                  <use xlink:href="#icon-burger"></use>
-                </svg>
-              </button>
-              <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link " href="#advantages">Преимущества</a>
+          <nav class="header__nav main-nav" data-state="close">
+            <div class="main-nav__wrapper container">
+              <img src="/img/logo.svg" alt="Логотип Big-IT" width="175" height="50">
+              <ul class="main-nav__list" data-state="close">
+                <li class="main-nav__item">
+                  <a class="main-nav__link " href="#advantages">Преимущества</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link " href="#">Тарифы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link " href="#">Схема работы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link " href="#">Наши клиенты</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link " href="#">Гарантии</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link " href="#">Контакты</a>
+                </li>
+              </ul>
+              <div class="main-nav__toggles" data-state="close">
+                <ul class="main-nav__contacts contacts-list">
+                  <li class="contacts-list__item">
+                    <a class="icon ui-color-bg  round  ">
+                      <svg width="15" height="15">
+                        <use xlink:href="#icon-phone"></use>
+                      </svg>
+                    </a>
                   </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link " href="#">Тарифы</a>
+                  <li class="contacts-list__item">
+                    <a class="icon ui-color-bg  round  ">
+                      <svg width="17" height="17">
+                        <use xlink:href="#icon-whatsup"></use>
+                      </svg>
+                    </a>
                   </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link " href="#">Схема работы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link " href="#">Наши клиенты</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link " href="#">Гарантии</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link " href="#">Контакты</a>
+                  <li class="contacts-list__item">
+                    <a class="icon ui-color-bg  round  ">
+                      <svg width="15" height="13">
+                        <use xlink:href="#icon-mail"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
-            </nav>
-            <ul class="contacts-list">
-              <li class="contacts-list__item">
-                <a class="icon ui-color-bg  round ">
-                  <svg width="15" height="15">
-                    <use xlink:href="#icon-phone"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="icon ui-color-bg  round ">
-                  <svg width="17" height="17">
-                    <use xlink:href="#icon-whatsup"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="icon ui-color-bg  round ">
-                  <svg width="15" height="13">
-                    <use xlink:href="#icon-mail"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+              <button class="main-nav__toggle round" data-state="close"></button>
+            </div>
+          </nav>
         </header>
         <div class="container main-page">
           <div class="main-page__decor-block decor">
             <span class="decor__item  "></span>
             <span class="decor__item  decor__item--br  "></span>
-            <span class="decor__double  decor__double--br    decor__double--gray "></span>
+            <span class="decor__double  decor__double--br   decor__double--gray "></span>
             <span class="decor__item  decor__item--br  "></span>
             <span class="decor__item  decor__item--br  "></span>
             <span class="decor__item    decor__item--none "></span>

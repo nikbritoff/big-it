@@ -1,26 +1,17 @@
 <header class="header @@if (context.mod) { header--@@mod }">
-  <div class="container">
-    @@if (!context.index) {
-      <a class="header__logo" href="index.html" aria-label="Переход на главную">
-        Логотип
-        <img src="/img/logo.svg" alt="Логотип Big-IT">
-      </a>
-    }
-    @@if (context.index) {
-      <img src="/img/logo.svg" alt="Логотип Big-IT" width="175" height="50">
-      <!-- <span class="header__logo">
-        Логотип
-      </span> -->
-    }
+    <nav class="header__nav main-nav" data-state="close">
+      <div class="main-nav__wrapper container">
+        @@if (!context.index) {
+          <a class="header__logo" href="index.html" aria-label="Переход на главную">
+            <img src="/img/logo.svg" alt="Логотип Big-IT">
+          </a>
+        }
+        @@if (context.index) {
+          <img src="/img/logo.svg" alt="Логотип Big-IT" width="175" height="50">
 
-    <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20" aria-hidden="true">
-          <use xlink:href="#icon-burger"></use>
-        </svg>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
+        }
+
+        <ul class="main-nav__list" data-state="close">
           <li class="main-nav__item">
             <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="#advantages" }>Преимущества</a>
           </li>
@@ -40,33 +31,36 @@
             <a class="main-nav__link @@if (context.headerActiveLinkIndex === 5) { is-active }" @@if (context.headerActiveLinkIndex !== 5) { href="#" }>Контакты</a>
           </li>
         </ul>
+
+        <div class="main-nav__toggles"  data-state="close">
+          <ul class="main-nav__contacts contacts-list">
+            <li class="contacts-list__item">
+              @@include("source/html/components/icon.html", {
+                "width": "15",
+                "height": "15",
+                "name": "phone",
+                "round": "true"
+              })
+            </li>
+            <li class="contacts-list__item">
+              @@include("source/html/components/icon.html", {
+                "width": "17",
+                "height": "17",
+                "name": "whatsup",
+                "round": "true"
+              })
+            </li>
+            <li class="contacts-list__item">
+              @@include("source/html/components/icon.html", {
+                "width": "15",
+                "height": "13",
+                "name": "mail",
+                "round": "true"
+              })
+            </li>
+          </ul>
+        </div>
+        <button class="main-nav__toggle round" data-state="close"></button>
       </div>
     </nav>
-    <ul class="contacts-list">
-      <li class="contacts-list__item">
-        @@include("source/html/components/icon.html", {
-          "width": "15",
-          "height": "15",
-          "name": "phone",
-          "round": "true"
-        })
-      </li>
-      <li class="contacts-list__item">
-        @@include("source/html/components/icon.html", {
-          "width": "17",
-          "height": "17",
-          "name": "whatsup",
-          "round": "true"
-        })
-      </li>
-      <li class="contacts-list__item">
-        @@include("source/html/components/icon.html", {
-          "width": "15",
-          "height": "13",
-          "name": "mail",
-          "round": "true"
-        })
-      </li>
-    </ul>
-  </div>
 </header>
